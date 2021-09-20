@@ -10,6 +10,7 @@ import android.widget.Toast;
 // Github 연동으로 협업하기
 public class MainActivity extends AppCompatActivity {
     private Button button1;
+    private Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +21,16 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "버튼", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "버튼1", Toast.LENGTH_SHORT).show();
             }
         });
 
+        button2 = findViewById(R.id.button1);
+        button2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "버튼2", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
